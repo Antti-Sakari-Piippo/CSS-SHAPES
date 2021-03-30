@@ -8,7 +8,6 @@
 .flex-container {
     display: flex;
     flex-wrap: wrap;
-
     // Frog
     .box {
         overflow: hidden;
@@ -118,7 +117,7 @@
             position: absolute;
             width: 70px;
             background: rgb(11, 60, 134);
-            height: 35px;
+            height: 37px;
         }
         &__curve {
             border-top-left-radius: 110px;
@@ -570,26 +569,43 @@
         &__2,
         &__3,
         &__4,
-        &__5 {
+        &__5,
+        &__6,
+        &__7,
+        &__8,
+        &__9,
+        &__10 {
             width: 125px;
             height: 125px;
-            background: orange;
+            background: #c0cbd0;
             position: absolute;
         }
-        &__1 {
-            transform: rotate(0deg);
-        }
         &__2 {
-            transform: rotate(72deg);
+            transform: rotate(9deg);
         }
         &__3 {
-            transform: rotate(144deg);
+            transform: rotate(18deg);
         }
         &__4 {
-            transform: rotate(216deg);
+            transform: rotate(27deg);
         }
         &__5 {
-            transform: rotate(288deg);
+            transform: rotate(36deg);
+        }
+        &__6 {
+            transform: rotate(45deg);
+        }
+        &__7 {
+            transform: rotate(54deg);
+        }
+        &__8 {
+            transform: rotate(63deg);
+        }
+        &__9 {
+            transform: rotate(72deg);
+        }
+        &__10 {
+            transform: rotate(81deg);
         }
         #saw__blade__support__1,
         #saw__blade__support__2,
@@ -597,26 +613,18 @@
         #saw__blade__support__4 {
             width: 120px;
             height: 25px;
-        }
-        #saw__blade__support__1 {
-            background: orange;
-
             position: absolute;
+            background: #c0cbd0;
         }
         #saw__blade__support__2 {
-            background: orange;
             position: absolute;
 
             transform: rotate(45deg);
         }
         #saw__blade__support__3 {
-            background: orange;
-            position: absolute;
             transform: rotate(90deg);
         }
         #saw__blade__support__4 {
-            background: orange;
-            position: absolute;
             transform: rotate(135deg);
         }
         #saw__blade__holes__1 {
@@ -627,9 +635,17 @@
             border-radius: 50%;
         }
         #saw__blade__holes__2 {
-            background: orange;
+            background: #c0cbd0;
             width: 109px;
             height: 109px;
+            position: absolute;
+            border-radius: 50%;
+        }
+        #saw__blade__holes__3 {
+            z-index: 999;
+            background: white;
+            width: 20px;
+            height: 20px;
             position: absolute;
             border-radius: 50%;
         }
@@ -779,6 +795,99 @@
                         }
                     }
                 }
+            }
+        }
+    }
+    .box {
+        #neon > * {
+            line-height: 45px;
+            font-family: 'Dancing Script', cursive;
+        }
+        #neon {
+            &__holder {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: 100%;
+                width: 100%;
+            }
+            background-color: #111111;
+            width: 100%;
+            height: 100%;
+
+            #code {
+                font-size: 3rem;
+                color: rgb(100, 0, 139);
+                text-align: center;
+                text-transform: uppercase;
+                text-shadow: 0 0 30px rgb(100, 0, 139);
+            }
+        }
+        #error {
+            color: rgb(16, 140, 255);
+            text-shadow: 0 0 30px rgb(16, 140, 255);
+        }
+        #error span {
+            animation: nightclub 10s normal infinite;
+        }
+        #code span:nth-of-type(2) {
+            animation: sixsixsix 10s normal infinite;
+        }
+        #code span:nth-of-type(1) {
+            text-shadow: none;
+            opacity: 0.4;
+        }
+        @keyframes nightclub {
+            0%,
+            19%,
+            22%,
+            64%,
+            70%,
+            100% {
+                opacity: 1;
+                text-shadow: 0 0 30px rgb(16, 140, 255);
+            }
+            20%,
+            21%,
+            63%,
+            63%,
+            65%,
+            69% {
+                opacity: 0.3;
+                text-shadow: none;
+            }
+        }
+        @keyframes sixsixsix {
+            0%,
+            12%,
+            17%,
+            24%,
+            30%,
+            37%,
+            44%,
+            46%,
+            60%,
+            85%,
+            96%,
+            100% {
+                opacity: 1;
+                text-shadow: 0 0 30px rgb(100, 0, 139);
+            }
+            19%,
+            22%,
+            32%,
+            36%,
+            45%,
+            45%,
+            50%,
+            59%,
+            60%,
+            69%,
+            70%,
+            86%,
+            100% {
+                opacity: 0.4;
+                text-shadow: none;
             }
         }
     }
